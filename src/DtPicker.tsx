@@ -26,6 +26,7 @@ import useComponentVisible from './hooks/useComponentVisible'
 import { IDtPickerProps, calendarLocal, calendarType, IRange } from './type'
 
 const DtPicker: FC<IDtPickerProps> = ({
+  formatValue,
   initValue,
   onChange,
   type,
@@ -203,6 +204,7 @@ const DtPicker: FC<IDtPickerProps> = ({
             >
               <SelectedTimeProvider initState={initTime} type={correctedType}>
                 <InputPicker
+                  formatValue={formatValue}
                   ref={inputRef}
                   placeholder={placeholder}
                   clearBtn={clearBtn}
